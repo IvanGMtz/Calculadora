@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+	background: #1c1c1ce5;
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    width: 90%;
+	max-width: 1200px;
+	margin: auto;
+	padding: 40px;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.form{
+    background-color: #1D202B;
+    border-radius: 20px;
+    padding: 10%;
+    display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+    align-items: center;
+
+}

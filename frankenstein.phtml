@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULADORA</title>
+</head>
+<body>
+    <form method="POST">
+    <input type="number" name="N1" placeholder="Ingrese nombre"><br>
+        <input type="number" name="N2" placeholder="Ingrese apellido"><br>
+        <select name="operation" >
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="/">/</option>
+            <option value="*">*</option>
+        </select>
+        <input type="submit" value="Enviar">
+    </form>
+    <?php
+        $N1= $_POST["N1"];
+        $N2= $_POST["N2"];
+        $Operador= $_POST["Operador"];
+
+        echo "<br><h1>$N1$Operador$N2</h1>";   
+    ?>
+</body>
+</html>
