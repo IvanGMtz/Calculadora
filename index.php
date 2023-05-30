@@ -66,6 +66,47 @@ body {
 }
 </style>
 <body>
+
+    <div class="container">
+    <div class="resultado">
+        <h1>Calculadora</h1>
+        <?php
+        /**
+         * @param N1 *Valor númerico tomado desde el formulario en el HTML.
+         * @param N2 *Valor númerico tomado desde el formulario en el HTML.
+         * @param Operador *Operador tipo string tomado desde el formulario en el HTML y comparado para hacer la operacion correspondiente.
+         */
+            $N1= (float) $_POST["N1"];
+            $N2= (float) $_POST["N2"];
+            $Operador= $_POST["operation"];
+
+            if($Operador==="+"){
+                $Resultado=$N1+$N2;
+            }elseif($Operador==="-"){
+                $Resultado=$N1-$N2;
+            }
+            elseif ($Operador==="/"){
+                $Resultado=$N1/$N2;
+            }
+            elseif($Operador==="*"){
+                $Resultado=$N1*$N2;
+            }
+            elseif($Operador==="**"){
+                $Resultado=$N1**$N2;
+            }
+            elseif($Operador==="%"){
+                $Resultado=$N1%$N2;
+            }
+            elseif($Operador==="por"){
+                $Resultado=$N1*($N2/100);
+            }
+            elseif($Operador==="sqr"){
+                $Resultado=$N1**(1/$N2);
+            }
+            echo "<br><h1>".round($Resultado,2)."</h1>";   
+        ?>
+    </div>
+        <!-- Se envía el formulario por el metodo POST al php -->
         <form method="POST" class="form">
             <input type="text" name="N1" placeholder="Ingrese variable 1" class="datos"><br>
             <br>
@@ -84,6 +125,7 @@ body {
             <br>
             <input type="submit" value="=" class="btn">
         </form>
+    </div>
      
 </body>
 </html>
