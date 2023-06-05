@@ -4,21 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <form method="POST" class="container">
-        <input type="number" name="N1" placeholder="Ingrese variable 1"><br>
-        <input type="number" name="N2" placeholder="Ingrese variable 2"><br>
-            <select name="operation" >
-                <option value="+">+</option>
-                <option value="-">-</option>
-                <option value="/">/</option>
-                <option value="*">*</option>
-            </select>
-        <input type="submit" value="Enviar">
-    </form>
-
+    <div class="container">
+        <input type="text" class="maininput"><br>
+        <form method="POST" action="">
+            <input type="submit" value="/" name="op" class="calbtn">
+            <input type="submit" value="^" name="op" class="calbtn">
+            <input type="submit" value="√" name="op" class="calbtn">
+            <input type="submit" value="%" name="op" class="calbtn">
+            <input type="submit" value="7" name="num" class="numbtn">
+            <input type="submit" value="8" name="num" class="numbtn">
+            <input type="submit" value="9" name="num" class="numbtn">
+            <input type="submit" value="+" name="op" class="calbtn">
+            <input type="submit" value="4" name="num" class="numbtn">
+            <input type="submit" value="5" name="num" class="numbtn">
+            <input type="submit" value="6" name="num" class="numbtn">
+            <input type="submit" value="-" name="op" class="calbtn">
+            <input type="submit" value="1" name="num" class="numbtn">
+            <input type="submit" value="2" name="num" class="numbtn">
+            <input type="submit" value="3" name="num" class="numbtn">
+            <input type="submit" value="*" name="op" class="calbtn">
+            <input type="submit" value="c" class="c">
+            <input type="submit" value="0" class="numbtn">
+            <input type="submit" value="." class="numbtn">
+            <input type="submit" value="=" class="equal">
+        </form>
+    </div>
 </body>
 </html>
