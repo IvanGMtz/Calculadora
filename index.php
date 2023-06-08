@@ -19,7 +19,7 @@
     }
     if(isset($_POST["equal"])){
         $num=$_POST["input"];
-        switch($_COOKIE["op"])
+        switch($_COOKIE["op"] && !($_COOKIE["num"]==0 && $_COOKIE["op"]=="/"))
         {
             case "+":
                 $result=$_COOKIE["num"]+$num;
@@ -42,7 +42,10 @@
             case "√":
                 $result=$_COOKIE["num"]**(1/$num);
                 break;
-        }
+        };
+        if($_COOKIE["num"]==0 && $_COOKIE["op"]=="/"){
+            $result="SYNTAX ERROR";
+        };
         $num=$result;
     }
 ?>
